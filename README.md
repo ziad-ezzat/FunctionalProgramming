@@ -1,6 +1,6 @@
 # What Is a Functional Programming?
 
-![EN-programmierparadigmen.png](..%2F..%2FEN-programmierparadigmen.png)
+![1.png](Photos%2F1.png)
 
 Functional programming is a declarative programming paradigm, meaning that the program logic is expressed without explicitly describing the control flow. It emphasizes the application of functions, in contrast to the imperative programming style, which emphasizes changes in state.
 It's based on the concept of "pure functions," which produce output based solely on their inputs and have no side effects
@@ -168,8 +168,8 @@ BinaryOperator<Integer> addIntegers = (a, b) -> a + b;
 int sum = addIntegers.apply(5, 7);
 ```
 
-![21.08.2023_16.40.17_REC.png](..%2F..%2F21.08.2023_16.40.17_REC.png)
-![21.08.2023_16.41.13_REC.png](..%2F..%2F21.08.2023_16.41.13_REC.png)
+![2.png](Photos%2F2.png)
+![3.png](Photos%2F3.png)
 
 # Returning an Optional
 
@@ -188,7 +188,7 @@ either request an empty Optional or pass a value for the Optional to wrap. Think
 Optional as a box that might have something in it or might instead be empty. Figure 4.1
 shows both options.
 
-![24.08.2023_17.10.38_REC.png](..%2F..%2F24.08.2023_17.10.38_REC.png)
+![4.png](Photos%2F4.png)
 
 ### Here’s how to code our average method:
 
@@ -215,7 +215,7 @@ The `Optional` class was introduced in Java 8 to represent an optional value. It
 
 ## Optional instance methods
 
-![24.08.2023_17.18.53_REC.png](..%2F..%2F24.08.2023_17.18.53_REC.png)
+![5.png](Photos%2F5.png)
 
 ```java
 Optional<Double> opt = average(90, 100);
@@ -310,14 +310,14 @@ Stream<String> namesStream = StreamSupport.stream(Spliterators.spliteratorUnknow
 
 ## Using Stream Operations
 
-![21.08.2023_17.22.05_REC.png](..%2F..%2F21.08.2023_17.22.05_REC.png)
+![6.png](Photos%2F6.png)
 
 Once you have a stream, you can perform operations on it. There are two types of operations:
 
 * **Intermediate operations** - Intermediate operations return a new stream. They are always lazy; executing an intermediate operation such as `filter()` does not actually perform any filtering, but instead creates a new stream that, when traversed, contains the elements of the initial stream that match the given predicate. Intermediate operations are never the final result of a stream pipeline.
 * **Terminal operations** - Terminal operations return a result of a certain type instead of again a Stream. Terminal operations are eager and execute the stream pipeline to produce a result. A terminal operation is the last operation in a stream pipeline.
 
-![21.08.2023_17.24.07_REC.png](..%2F..%2F21.08.2023_17.24.07_REC.png)
+![7.png](Photos%2F7.png)
 
 ### Intermediate Operations
 
@@ -403,7 +403,7 @@ Stream<String> peekedNamesStream = namesStream.peek(System.out::println);
 
 Terminal operations return a result of a certain type instead of again a Stream. Terminal operations are eager and execute the stream pipeline to produce a result. A terminal operation is the last operation in a stream pipeline.
 
-![24.08.2023_17.51.04_REC.png](..%2F..%2F24.08.2023_17.51.04_REC.png)
+![8.png](Photos%2F8.png)
 
 #### forEach()
 
@@ -551,7 +551,7 @@ Once you start using streams in your code, you may find yourself using them in m
 places. Having shorter, briefer, and clearer code is definitely a good thing!
 In this example, you see all three parts of the pipeline. Figure 4.5 shows how each intermediate operation in the pipeline feeds into the next.
 
-![24.08.2023_18.13.23_REC.png](..%2F..%2F24.08.2023_18.13.23_REC.png)
+![9.png](Photos%2F9.png)
 
 
 # Working with Primitives
