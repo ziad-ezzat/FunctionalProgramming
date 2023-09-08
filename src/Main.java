@@ -1,4 +1,9 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 interface Gorilla {
     String move();
@@ -60,5 +65,26 @@ public class Main {
 //        int sum = add.apply(3, 4);
 //        System.out.println(sum);
 // --------------------------------------------------
+
+        // example to show how reduce works in streams
+
+        // 1. create a stream of integers.
+        // 2. reduce the stream to a single value by adding all the elements.
+        // 3. print the result.
+//        Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5);
+//        Integer sum = stream.reduce(0, (a, b) -> a + b);
+//        System.out.println(sum);  // 15
+
+//        Stream<String> stream = Stream.of("w", "o", "l", "f");
+//        String word = stream.collect(StringBuilder::new,StringBuilder::append,StringBuilder::append).toString();
+//        System.out.println(word); // wolf
+
+        Stream<String> s = Stream.empty();
+        Stream<String> s2 = Stream.empty();
+        Map<Boolean, List<String>> p = s.collect(
+                Collectors.partitioningBy(b -> b.startsWith("c")));
+        Map<Boolean, List<String>> g = s2.collect(
+                Collectors.groupingBy(b -> b.startsWith("c")));
+        System.out.println(p + " " + g);
     }
 }
